@@ -46,6 +46,7 @@ resource "azurerm_network_interface" "ubuntu_vm" {
     name                          = "ipconfig"
     public_ip_address_id          = azurerm_public_ip.ubuntu_vm.id
     private_ip_address_allocation = "dynamic"
+    subnet_id                     = var.vm_subnet_id 
   }
 
   tags = var.common_tags
