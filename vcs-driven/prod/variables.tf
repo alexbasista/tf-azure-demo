@@ -14,6 +14,11 @@ variable "common_tags" {
   default     = {}
 }
 
+variable "vm_subnet_id" {
+  type        = string
+  description = "Subnet ID to provision VM Network Interface on."
+}
+
 variable "vm_username" {
   type        = string
   description = "Username for local administrator account of Virtual Machine."
